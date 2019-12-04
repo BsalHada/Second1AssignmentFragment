@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editNumber"
-            android:hint="Enter radius"/>
+            android:hint="Enter radius"
+            />
 
         <Button
             android:layout_width="match_parent"

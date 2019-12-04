@@ -14,7 +14,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.example.secondassignmentfragment.R;
 
 import java.util.HashMap;
@@ -26,8 +25,8 @@ import java.util.Scanner;
 public class PalindromeNumberFragment extends Fragment {
 
     View view;
-    EditText editTextPalin;
-    Button buttonPalin;
+    EditText editTextPalen;
+    Button buttonPalen;
     HashMap<Character, Integer> charCountMap;
     TextView textViewReverse;
 
@@ -42,26 +41,26 @@ public class PalindromeNumberFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_palindrome_number, container, false);
 
-        editTextPalin = view.findViewById(R.id.editPalen);
-        buttonPalin = view.findViewById(R.id.btnPalendrome);
+        editTextPalen = view.findViewById(R.id.editPalen);
+        buttonPalen = view.findViewById(R.id.btnPalendrome);
         textViewReverse = view.findViewById(R.id.textPalendrome);
 
         charCountMap = new HashMap<>();
 
-        buttonPalin.setOnClickListener(new View.OnClickListener() {
+        buttonPalen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!editTextPalin.getText().toString().isEmpty()) {
-                    StringBuffer c = new StringBuffer(editTextPalin.getText().toString());
+                if (!editTextPalen.getText().toString().isEmpty()) {
+                    StringBuffer c = new StringBuffer(editTextPalen.getText().toString());
                     textViewReverse.setText(c.reverse());
 
-                    if (editTextPalin.getText().equals(textViewReverse.getText())) {
-                        Toast.makeText(getActivity(), "The value is palindrome", Toast.LENGTH_LONG).show();
+                    if (editTextPalen.getText().toString().equals(textViewReverse.getText().toString())) {
+                        Toast.makeText(getActivity(), "The value is palendrome", Toast.LENGTH_LONG).show();
                     } else {
-                        Toast.makeText(getActivity(), "Sorry! Not a palindrome number", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "Oops!! Not a palendrome number", Toast.LENGTH_LONG).show();
                     }
                 } else {
-                    editTextPalin.setError("Enter Your Text");
+                    editTextPalen.setError("Enter Your Text");
                 }
             }
         });
